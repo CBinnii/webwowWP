@@ -1,0 +1,72 @@
+.header { 
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+
+    .menu {
+        position: absolute;
+        z-index: 1000;
+        top: 40px;
+        left: 40px;
+
+        ul {
+            li {
+                a {
+                    font-family: 'telegraf_ultrabold', 'Lucida Sans', Verdana, sans-serif;
+                    font-size: 20px;
+                    color: $white;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    line-height: 1.5;
+                    text-shadow: 0px 0px 5px rgba(0,0,0,0.75);
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .logo {
+        position: absolute;
+        z-index: 900;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img {
+            width: 250px;
+        }
+    }
+
+    .social {
+        position: absolute;
+        z-index: 900;
+        top: 30px;
+        right: 40px;
+        display: flex;
+        
+        a {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            background-color: $primary;
+            padding: 8px;
+            border-radius: 100%;
+            box-shadow: 0.02605448em -0.02429619em 0em cyan, -0.02605448em 0.02429619em 0em red;
+            
+            &:last-of-type {
+                margin: 0;
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+@import "mixins/_colunas.scss";
+@import "mixins/_vertical-align.scss";
+@import "font-family/_font-face.scss";
+@import "vendor/_variables.scss";
+@import "vendor/_font-face.scss";
+@import "vendor/bootstrap/bootstrap.scss";
+@import "vendor/bootstrap/bootstrap-grid.scss";
+@import "vendor/bootstrap/bootstrap-reboot.scss";
+@import "vendor/bootstrap/bootstrap-utilities.scss";
+@import "vendor/swiper/_swiper.scss";
+@import "vendor/reset";
+
+@import "_effects.scss";
+@import "_header.scss";
+@import "_footer.scss";
+@import "_button.scss";
+@import "_main.scss";
+@import "_contact.scss";
+@import "_about.scss";
+@import "_internal.scss";
+
+html,
+body {
+	position: relative;
+	height: 100%;
+}
+
+body {
+	background: #eee;
+	font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+	font-size: 14px;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+.title {
+	font-family: 'bungee', 'Lucida Sans', Geneva, Verdana, sans-serif;
+	line-height: 0.73788139em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0em;
+	font-size: 72px;
+	margin-bottom: 80px;
+
+	&.primary {
+		text-shadow: 0.02605448em -0.02429619em 0em rgba(0, 255, 255, 1.000000), -0.02605448em 0.02429619em 0em rgba(255, 0, 0, 1.000000);
+	}
+
+	&.white {
+		color: $white;
+		text-shadow: 0.02605448em -0.02429619em 0em rgba(0, 255, 255, 1.000000), -0.02605448em 0.02429619em 0em rgba(255, 0, 0, 1.000000);
+	}
+
+	&.black {
+		color: $black;
+		text-shadow: 0.02605448em -0.02429619em 0em rgba(0, 255, 255, 1.000000), -0.02605448em 0.02429619em 0em rgba(255, 0, 255, 1.000000);
+	}
+
+	&.purple {
+		color: $purple;
+		text-shadow: 0.02605448em -0.02429619em 0em rgba(0, 255, 255, 1.000000), -0.02605448em 0.02429619em 0em rgba(255, 0, 255, 1.000000);
+	}
+
+	&.orange {
+		color: $orange;
+		text-shadow: 0.02605448em -0.02429619em 0em rgba(0, 255, 255, 1.000000), -0.02605448em 0.02429619em 0em rgba(255, 0, 255, 1.000000);
+	}
+
+	&.blue {
+		color: $blue;
+		text-shadow: 0.02605448em -0.02429619em 0em rgba(0, 255, 255, 1.000000), -0.02605448em 0.02429619em 0em rgba(255, 0, 255, 1.000000);
+	}
+
+	&.pink {
+		color: $pink;
+		text-shadow: 0.02605448em -0.02429619em 0em rgba(0, 255, 255, 1.000000), -0.02605448em 0.02429619em 0em rgba(255, 0, 255, 1.000000);
+	}
+
+	&.text-left {
+		text-align: left;
+	}
+
+	&.text-right {
+		text-align: right;
+	}
+
+	&.text-center {
+		text-align: center;
+	}
+}

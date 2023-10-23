@@ -1,0 +1,62 @@
+.button {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 991px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-default {
+        position: relative;
+        font-family: 'telegraf_regular', 'Open Sans', Verdana, sans-serif;
+        padding: 16px 32px;
+        border: none;
+        border-radius: 50px;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.35337233em;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.29em;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &.primary {
+            background-color: $primary;
+        }
+
+        &.white {
+            background-color: $white;
+        }
+
+        &.purple {
+            background-color: $purple;
+        }
+
+        &.orange {
+            background-color: $orange;
+        }
+
+        &.blue {
+            background-color: $blue;
+        }
+
+        &.pink {
+            background-color: $pink;
+        }
+
+        @media screen and (max-width: 991px) {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+    }
+}
