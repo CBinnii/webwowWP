@@ -19975,10 +19975,8 @@ input:active, input:focus, button:active, button:focus {
     letter-spacing: 0.29em; }
     .button .button-default:last-of-type {
       margin-right: 0; }
-    .button .button-default.primary {
+    .button .button-default.primary, .button .button-default.white {
       background-color: #E23631; }
-    .button .button-default.white {
-      background-color: #FFFFFF; }
     .button .button-default.purple {
       background-color: #7843e6; }
     .button .button-default.orange {
@@ -20210,7 +20208,31 @@ input:active, input:focus, button:active, button:focus {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 60px; }
+        margin-bottom: 60px;
+        position: relative; }
+        .internal-page .internal-page-text .works .our-work.background .image-opacity {
+          opacity: 0.5;
+          position: absolute;
+          background-repeat: no-repeat;
+          background-position: top center;
+          background-size: cover;
+          width: 100%;
+          height: 100%; }
+        .internal-page .internal-page-text .works .our-work a {
+          text-decoration: none;
+          color: #000000;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .internal-page .internal-page-text .works .our-work a p {
+            margin: 0;
+            text-shadow: 0px 2px 6px #000000;
+            font-size: 24px;
+            font-family: 'telegraf_ultrabold', 'Lucida Sans', Verdana, sans-serif;
+            letter-spacing: 3px; }
         .internal-page .internal-page-text .works .our-work p {
           margin: 0; }
         .internal-page .internal-page-text .works .our-work .type-1 {
@@ -20329,5 +20351,8 @@ body {
     text-align: right; }
   .title.text-center {
     text-align: center; }
+
+html {
+  margin-top: 0px !important; }
 
 /*# sourceMappingURL=style.css.map */

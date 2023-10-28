@@ -30,12 +30,8 @@
             margin-right: 0;
         }
 
-        &.primary {
+        &.primary, &.white  {
             background-color: $primary;
-        }
-
-        &.white {
-            background-color: $white;
         }
 
         &.purple {
