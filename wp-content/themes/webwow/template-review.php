@@ -18,30 +18,28 @@
 		
 					<?php echo apply_filters('the_content', $post->post_content); ?>
 					
-					<div class="row works">
-						<div class="col-md-6">
-							<div class="our-work">
-								<p>CLICK - LINK TO THE WEBSITE</p>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="our-work">
-								<p>CLICK - LINK TO THE WEBSITE</p>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="our-work">
-								<p>CLICK - LINK TO THE WEBSITE</p>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="our-work">
-								<p>CLICK - LINK TO THE WEBSITE</p>
-							</div>
-						</div>
-					</div>
+					<?php if( have_rows('works') ): ?>
+						<div class="row works">
+							<?php
+								while( have_rows('works') ) : the_row();
 
-					<p>Individuals, businesses, or organizations that hire digital marketing agencies or professionals to manage and implement their online marketing efforts. These clients seek assistance in utilizing digital channels and platforms to achieve various marketing objectives, such as increasing brand awareness, driving website traffic, generating leads, and boosting sales.</p>
+								$image = get_sub_field('image');
+								$link = get_sub_field('link');
+								$title = get_sub_field('title');
+							?>
+								<div class="col-md-6">
+									<div class="our-work <?php if($image): echo 'background'; endif;?>">
+										<div class="image-opacity" style="background-image: url('<?php echo $image ?>')"></div>
+										<?php if($link):?> <a href="<?php echo $link ?>" target="_blank"> <?php endif;?>
+											<p><?php echo $title ?></p>
+										<?php if($link):?> </a> <?php endif;?>
+									</div>
+								</div>
+							<?php endwhile; ?>
+						</div>
+					<?php endif; ?>
+
+					<?php the_field('more_content'); ?>
 					
 					<div class="button">
 						<a href="/contact-ons" class="button-default <?php echo get_field('color'); ?>">Contact Ons</a>

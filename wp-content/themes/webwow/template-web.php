@@ -30,9 +30,9 @@
 								<div class="col-md-6">
 									<div class="our-work <?php if($image): echo 'background'; endif;?>">
 										<div class="image-opacity" style="background-image: url('<?php echo $image ?>')"></div>
-										<a href="<?php echo $link ?>" target="_blank">
+										<?php if($link):?> <a href="<?php echo $link ?>" target="_blank"> <?php endif;?>
 											<p><?php echo $title ?></p>
-										</a>
+										<?php if($link):?> </a> <?php endif;?>
 									</div>
 								</div>
 							<?php endwhile; ?>

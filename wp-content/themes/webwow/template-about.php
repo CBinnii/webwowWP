@@ -3,7 +3,7 @@
  * Template Name: Over Ons
  *
  **/
-	get_header('logo');
+	get_header();
 ?>
 	<section class="main">
 		<div class="about-page">

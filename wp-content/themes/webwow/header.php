@@ -38,22 +38,42 @@
 	<body>
 		<header class="header">
 			<div class="menu">
-				<ul>
-					<li><a href="webdevelopment">Webdevelopment</a></li>
-					<li><a href="social-media">Social Media</a></li>
-					<li><a href="google-ads">Google ADS</a></li>
-					<li><a href="review-management">Review Management</a></li>
-					<li><a href="over-ons">Over Ons</a></li>
-					<li><a href="contact-ons">Contact</a></li>
-				</ul>
+				<button class="navbar-toggler">
+					<div class="menu-button" id="menu-button" onclick="menuMobile()">
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+				</button>
+				<div class="navbar-menu">
+					<ul class="collapse navbar-collapse" id="navbar-collapse">
+						<li><a href="webdevelopment">Webdevelopment</a></li>
+						<li><a href="social-media">Social Media</a></li>
+						<li><a href="google-ads">Google ADS</a></li>
+						<li><a href="review-management">Review Management</a></li>
+						<li><a href="over-ons">Over Ons</a></li>
+						<li><a href="contact-ons">Contact</a></li>
+					</ul>
+				</div>
 			</div>
 			<div class="logo">
-				<a href="index.html"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-webwow.png" alt="Logo"></a>
+				<a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-webwow.png" alt="Logo"></a>
 			</div>
 			<div class="social">
-				<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/envelope.svg" alt="Email Icon"></a>
-				<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/phone-alt.svg" alt="Phone Icon"></a>
-				<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/whatsapp.svg" alt="Whatsapp Icon"></a>
+				<?php 
+					$whatsapp = get_field('whatsapp', 'option');
+					$phone = get_field('call', 'option');
+					$email = get_field('email', 'option');
+				?>
+				<?php if( !empty($email) ): ?>
+					<a href="<?php echo $email; ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/envelope.svg" alt="Email Icon"></a>
+				<?php endif; ?>
+				<?php if( !empty($phone) ): ?>
+					<a href="<?php echo $phone; ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/phone-alt.svg" alt="Phone Icon"></a>
+				<?php endif; ?>
+				<?php if( !empty($whatsapp) ): ?>
+					<a href="<?php echo $whatsapp; ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/whatsapp.svg" alt="Whatsapp Icon"></a>
+				<?php endif; ?>
 			</div>
 		</header>
     

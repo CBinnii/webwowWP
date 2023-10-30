@@ -39,7 +39,7 @@
 						</div>
 					<?php endif; ?>
 
-					<p>Individuals, businesses, or organizations that hire digital marketing agencies or professionals to manage and implement their online marketing efforts. These clients seek assistance in utilizing digital channels and platforms to achieve various marketing objectives, such as increasing brand awareness, driving website traffic, generating leads, and boosting sales.</p>
+					<?php the_field('more_content'); ?>
 					
 					<div class="button">
 						<a href="/contact-ons" class="button-default <?php echo get_field('color'); ?>">Contact Ons</a>
