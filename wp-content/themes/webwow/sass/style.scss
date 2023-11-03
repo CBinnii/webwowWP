@@ -43,6 +43,11 @@ body {
 	font-size: 72px;
 	margin-bottom: 80px;
 
+	@media screen and (max-width: 767px){
+		font-size: 32px;
+		margin-bottom: 48px;
+	}
+
 	&.primary {
 		text-shadow: 0.02605448em -0.02429619em 0em rgba(0, 255, 255, 1.000000), -0.02605448em 0.02429619em 0em rgba(255, 0, 0, 1.000000);
 	}

@@ -20068,8 +20068,8 @@ input:active, input:focus, button:active, button:focus {
       background-color: #ff8bd2; }
     @media screen and (max-width: 991px) {
       .button .button-default {
-        font-size: 16px;
-        margin-bottom: 30px; } }
+        font-size: 14px;
+        margin-bottom: 16px; } }
 
 .swiper {
   width: 100%;
@@ -20406,6 +20406,10 @@ body {
   letter-spacing: 0em;
   font-size: 72px;
   margin-bottom: 80px; }
+  @media screen and (max-width: 767px) {
+    .title {
+      font-size: 32px;
+      margin-bottom: 48px; } }
   .title.primary {
     text-shadow: 0.02605448em -0.02429619em 0em cyan, -0.02605448em 0.02429619em 0em red; }
   .title.white {
