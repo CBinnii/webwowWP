@@ -20,10 +20,16 @@
             height: 100%;
             object-fit: cover;
         }
+
+        .slide-content {
+            @media screen and (max-width: 991px) {
+                padding: 0 20px;
+            }
+        }
     }
 
     .swiper-pagination-bullets {
-        padding-top: 30px;
+        padding-top: 10px;
         padding-bottom: 10px;
         
         &.swiper-pagination-horizontal {
@@ -35,8 +41,8 @@
     
         .swiper-pagination-bullet {
             background: $gray-4;
-            width: 20px;
-            height: 20px;
+            width: 10px;
+            height: 10px;
             opacity: 1;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     
@@ -91,7 +97,7 @@
         height: 700px;
         overflow: hidden;
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
 
         @media screen and (min-width: 1900px) {
@@ -120,10 +126,10 @@
     align-items: center;
     justify-content: center;
     
-    font-family: 'telegraf_regular', 'Lucida Sans', Verdana, sans-serif;
+    font-family: 'ogg_text_book', 'Lucida Sans', Verdana, sans-serif;
 
     strong {
-        font-family: 'telegraf_ultrabold', 'Lucida Sans', Verdana, sans-serif;
+        font-family: 'ogg_text_bold', 'Lucida Sans', Verdana, sans-serif;
     }
 
     ._404-page-text {
@@ -132,7 +138,7 @@
         margin: 0 auto;
 
         h1 {
-            font-family: 'telegraf_ultrabold', 'Lucida Sans', Verdana, sans-serif;
+            font-family: 'ogg_text_bold', 'Lucida Sans', Verdana, sans-serif;
             font-size: 34px;
             text-transform: uppercase;
             color: $black;

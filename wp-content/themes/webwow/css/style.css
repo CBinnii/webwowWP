@@ -24,6 +24,51 @@
   src: url("../fonts/midnight-sans-webfont.woff2") format("woff2"), url("../fonts/midnight-sans-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: 'ogg_bold';
+  src: url("../fonts/ogg-bold-webfont.woff2") format("woff2"), url("../fonts/ogg-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ogg_light';
+  src: url("../fonts/ogg-light-webfont.woff2") format("woff2"), url("../fonts/ogg-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ogg_medium';
+  src: url("../fonts/ogg-medium-webfont.woff2") format("woff2"), url("../fonts/ogg-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ogg_text_book';
+  src: url("../fonts/ogg-regular-webfont.woff2") format("woff2"), url("../fonts/ogg-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ogg_text_bold';
+  src: url("../fonts/oggtext-bold-webfont.woff2") format("woff2"), url("../fonts/oggtext-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ogg_text_book';
+  src: url("../fonts/oggtext-book-webfont.woff2") format("woff2"), url("../fonts/oggtext-book-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ogg_text_extrabold';
+  src: url("../fonts/oggtext-extrabold-webfont.woff2") format("woff2"), url("../fonts/oggtext-extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ogg_text_light';
+  src: url("../fonts/oggtext-light-webfont.woff2") format("woff2"), url("../fonts/oggtext-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ogg_text_medium';
+  src: url("../fonts/oggtext-medium-webfont.woff2") format("woff2"), url("../fonts/oggtext-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 .white {
   color: #FFFFFF; }
 
@@ -19899,7 +19944,7 @@ input:active, input:focus, button:active, button:focus {
   100% {
     background-position: Calc(100%); } }
 .header {
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   width: 100%; }
   @media screen and (max-width: 991px) {
@@ -19917,7 +19962,7 @@ input:active, input:focus, button:active, button:focus {
     @media screen and (max-width: 991px) {
       .header .menu {
         position: initial;
-        width: 100%; } }
+        width: 35px; } }
     .header .menu .navbar-toggler {
       margin-left: 0;
       background-color: transparent;
@@ -19944,7 +19989,8 @@ input:active, input:focus, button:active, button:focus {
           background-color: #FFFFFF;
           border-radius: 10px;
           -webkit-transition: 0.3s;
-          transition: 0.3s; }
+          transition: 0.3s;
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.35); }
           .header .menu .navbar-toggler .menu-button .bar:nth-of-type(1) {
             margin-top: 0px; }
           .header .menu .navbar-toggler .menu-button .bar:nth-of-type(3) {
@@ -19970,12 +20016,12 @@ input:active, input:focus, button:active, button:focus {
         position: absolute; } }
     .header .menu .navbar-menu ul li a {
       font-family: 'telegraf_ultrabold', 'Lucida Sans', Verdana, sans-serif;
-      font-size: 20px;
+      font-size: 16px;
       color: #FFFFFF;
       text-transform: uppercase;
       text-decoration: none;
       line-height: 1.5;
-      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75); }
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15); }
       .header .menu .navbar-menu ul li a:hover {
         text-decoration: underline; }
   .header .logo {
@@ -19984,13 +20030,18 @@ input:active, input:focus, button:active, button:focus {
     top: 30px;
     left: 50%;
     transform: translateX(-50%); }
+    .header .logo img {
+      width: 250px; }
     @media screen and (max-width: 991px) {
       .header .logo {
         position: initial;
         width: 100%;
-        transform: none; } }
-    .header .logo img {
-      width: 250px; }
+        transform: none;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .header .logo img {
+          width: 150px; } }
   .header .social {
     position: absolute;
     z-index: 900;
@@ -20000,15 +20051,15 @@ input:active, input:focus, button:active, button:focus {
     @media screen and (max-width: 991px) {
       .header .social {
         position: initial;
-        width: 100%;
+        width: 95px;
         justify-content: flex-end; } }
     .header .social a {
-      width: 50px;
-      height: 50px;
+      width: 35px;
+      height: 35px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 16px;
+      margin-right: 8px;
       background-color: #E23631;
       padding: 8px;
       border-radius: 100%;
@@ -20016,13 +20067,12 @@ input:active, input:focus, button:active, button:focus {
       .header .social a:last-of-type {
         margin: 0; }
       .header .social a img {
-        width: 30px;
-        height: 30px; }
+        width: 20px;
+        height: 20px; }
     @media screen and (max-width: 991px) {
       .header .social a {
         width: 25px;
-        height: 25px;
-        margin-right: 8px; }
+        height: 25px; }
         .header .social a:last-of-type {
           margin: 0; }
         .header .social a img {
@@ -20039,7 +20089,7 @@ input:active, input:focus, button:active, button:focus {
   .button .button-default {
     position: relative;
     font-family: 'telegraf_regular', 'Open Sans', Verdana, sans-serif;
-    padding: 16px 32px;
+    padding: 12px 24px;
     border: none;
     border-radius: 50px;
     color: #FFFFFF;
@@ -20048,9 +20098,9 @@ input:active, input:focus, button:active, button:focus {
     justify-content: space-between;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
-    line-height: 1.35337233em;
+    line-height: 1.3em;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.29em; }
@@ -20089,8 +20139,11 @@ input:active, input:focus, button:active, button:focus {
       width: 100%;
       height: 100%;
       object-fit: cover; }
+    @media screen and (max-width: 991px) {
+      .swiper .swiper-slide .slide-content {
+        padding: 0 20px; } }
   .swiper .swiper-pagination-bullets {
-    padding-top: 30px;
+    padding-top: 10px;
     padding-bottom: 10px; }
     .swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
       position: relative;
@@ -20099,8 +20152,8 @@ input:active, input:focus, button:active, button:focus {
       left: initial; }
     .swiper .swiper-pagination-bullets .swiper-pagination-bullet {
       background: #D9D9D9;
-      width: 20px;
-      height: 20px;
+      width: 10px;
+      height: 10px;
       opacity: 1;
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); }
       @media screen and (max-width: 991px) {
@@ -20138,7 +20191,7 @@ input:active, input:focus, button:active, button:focus {
   height: 700px;
   overflow: hidden;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center; }
   @media screen and (min-width: 1900px) {
     .main .banner-default {
@@ -20158,15 +20211,15 @@ input:active, input:focus, button:active, button:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'telegraf_regular', 'Lucida Sans', Verdana, sans-serif; }
+  font-family: 'ogg_text_book', 'Lucida Sans', Verdana, sans-serif; }
   ._404-page strong {
-    font-family: 'telegraf_ultrabold', 'Lucida Sans', Verdana, sans-serif; }
+    font-family: 'ogg_text_bold', 'Lucida Sans', Verdana, sans-serif; }
   ._404-page ._404-page-text {
     max-width: 600px;
     display: block;
     margin: 0 auto; }
     ._404-page ._404-page-text h1, ._404-page ._404-page-text .h1 {
-      font-family: 'telegraf_ultrabold', 'Lucida Sans', Verdana, sans-serif;
+      font-family: 'ogg_text_bold', 'Lucida Sans', Verdana, sans-serif;
       font-size: 34px;
       text-transform: uppercase;
       color: #000000;
@@ -20190,10 +20243,15 @@ input:active, input:focus, button:active, button:focus {
   background-color: #5CE1E6;
   min-height: 100vh;
   padding: 40px;
-  padding-top: 150px;
+  padding-top: 200px;
   display: flex;
   align-items: center;
   justify-content: center; }
+  .contact-page .title {
+    margin-bottom: 30px !important; }
+    @media screen and (max-width: 991px) {
+      .contact-page .title {
+        font-size: 28px !important; } }
   .contact-page ul {
     max-width: 430px; }
     .contact-page ul li {
@@ -20203,8 +20261,8 @@ input:active, input:focus, button:active, button:focus {
       margin-bottom: 16px;
       padding: 4px 0; }
       .contact-page ul li h4, .contact-page ul li .h4 {
-        font-family: 'telegraf_ultrabold', 'Lucida Sans', Verdana, sans-serif;
-        font-size: 20px;
+        font-family: 'ogg_text_bold', 'Lucida Sans', Verdana, sans-serif;
+        font-size: 18px;
         color: #000000;
         text-transform: uppercase;
         text-decoration: none;
@@ -20213,8 +20271,8 @@ input:active, input:focus, button:active, button:focus {
         flex: 0 0 auto;
         width: 50%;
         padding-right: 8px; }
-      .contact-page ul li p {
-        font-family: 'telegraf_regular', 'Lucida Sans', Verdana, sans-serif;
+      .contact-page ul li p, .contact-page ul li a {
+        font-family: 'ogg_text_book', 'Lucida Sans', Verdana, sans-serif;
         font-size: 16px;
         color: #000000;
         text-decoration: none;
@@ -20222,13 +20280,23 @@ input:active, input:focus, button:active, button:focus {
         flex: 0 0 auto;
         width: 50%;
         padding-left: 8px; }
-  .contact-page .contact-logo {
+  .contact-page .contact-form {
     height: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end; }
-    .contact-page .contact-logo img {
-      max-width: 240px; }
+    text-align: center; }
+    .contact-page .contact-form form label {
+      margin-bottom: 16px; }
+    .contact-page .contact-form form .form-control {
+      min-height: 40px !important;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; }
+    .contact-page .contact-form form textarea.form-control {
+      min-height: 150px;
+      resize: none; }
+    .contact-page .contact-form img {
+      max-width: 180px;
+      margin-bottom: 24px; }
 
 .about-page {
   background-color: #FFFFFF;
@@ -20238,9 +20306,9 @@ input:active, input:focus, button:active, button:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'telegraf_regular', 'Lucida Sans', Verdana, sans-serif; }
+  font-family: 'ogg_text_book', 'Lucida Sans', Verdana, sans-serif; }
   .about-page strong {
-    font-family: 'telegraf_ultrabold', 'Lucida Sans', Verdana, sans-serif; }
+    font-family: 'ogg_text_bold', 'Lucida Sans', Verdana, sans-serif; }
   .about-page .about-page-text {
     max-width: 600px;
     display: block;
@@ -20249,7 +20317,6 @@ input:active, input:focus, button:active, button:focus {
       margin-bottom: 50px !important; }
     .about-page .about-page-text p {
       font-size: 18px;
-      text-transform: uppercase;
       color: #000000;
       text-decoration: none;
       line-height: 1.5;
@@ -20258,28 +20325,33 @@ input:active, input:focus, button:active, button:focus {
 
 .internal-page {
   background-color: #E3E3E3;
-  min-height: 100vh;
-  padding: 40px;
-  padding-top: 150px;
+  min-height: 600px;
+  padding: 80px 40px;
   display: flex;
-  align-items: center;
   justify-content: center; }
+  @media screen and (max-width: 991px) {
+    .internal-page {
+      padding: 40px 20px; } }
   .internal-page .internal-page-text {
-    max-width: 990px;
+    max-width: 700px;
     display: block;
     margin: 0 auto; }
     .internal-page .internal-page-text .title {
       margin-bottom: 50px !important; }
+      @media screen and (max-width: 991px) {
+        .internal-page .internal-page-text .title {
+          font-size: 28px !important; } }
     .internal-page .internal-page-text p {
-      font-size: 18px;
-      text-transform: uppercase;
+      font-family: 'ogg_text_book', 'Lucida Sans', Verdana, sans-serif;
+      font-size: 16px;
       color: #000000;
       text-decoration: none;
       line-height: 1.5;
       text-align: center;
       margin-bottom: 50px; }
     .internal-page .internal-page-text .works {
-      margin: 0 -30px; }
+      margin: 0 -30px;
+      margin-top: 60px; }
       .internal-page .internal-page-text .works .col-md-6 {
         padding: 0 30px; }
       .internal-page .internal-page-text .works .our-work {
@@ -20289,7 +20361,7 @@ input:active, input:focus, button:active, button:focus {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 60px;
+        margin-bottom: 80px;
         position: relative; }
         .internal-page .internal-page-text .works .our-work.background .image-opacity {
           opacity: 0.5;
@@ -20299,6 +20371,12 @@ input:active, input:focus, button:active, button:focus {
           background-size: cover;
           width: 100%;
           height: 100%; }
+        .internal-page .internal-page-text .works .our-work.background a p {
+          margin: 0;
+          font-family: 'ogg_text_bold', 'Lucida Sans', Verdana, sans-serif;
+          position: absolute;
+          top: -35px;
+          text-transform: uppercase; }
         .internal-page .internal-page-text .works .our-work a {
           text-decoration: none;
           color: #000000;
@@ -20310,10 +20388,8 @@ input:active, input:focus, button:active, button:focus {
           justify-content: center; }
           .internal-page .internal-page-text .works .our-work a p {
             margin: 0;
-            text-shadow: 0px 2px 6px #000000;
-            font-size: 24px;
-            font-family: 'telegraf_ultrabold', 'Lucida Sans', Verdana, sans-serif;
-            letter-spacing: 3px; }
+            font-family: 'ogg_text_bold', 'Lucida Sans', Verdana, sans-serif;
+            text-transform: capitalize; }
         .internal-page .internal-page-text .works .our-work p {
           margin: 0; }
         .internal-page .internal-page-text .works .our-work .type-1 {
@@ -20405,7 +20481,8 @@ body {
   text-transform: uppercase;
   letter-spacing: 0em;
   font-size: 72px;
-  margin-bottom: 80px; }
+  margin-bottom: 80px;
+  line-height: 1.2; }
   @media screen and (max-width: 767px) {
     .title {
       font-size: 32px;

@@ -15,35 +15,75 @@
 						<div class="contact-list">
 							<ul>
 								<li>
-									<h4 class="col-12 col-md-6">TELEFOONNUMMER</h4>
-									<p class="col-12 col-md-6">(+31) 06 46 175 220</p>
+									<?php
+										$parentesis = array("(", ")", " ");
+										$tel = str_replace($parentesis, "", get_field('phonenumber'));
+
+										$phonenumber = get_field('phonenumber');
+
+										if (!empty($phonenumber)) :
+									?>
+										<h4 class="col-12 col-md-6">TELEFOONNUMMER</h4>
+										<p class="col-12 col-md-6"><a href="tel:<?php echo $tel; ?>" target="_blank"><?php echo $phonenumber; ?></a></p>
+									<?php endif; ?>
 								</li>
 								<li>
-									<h4 class="col-12 col-md-6">EMAIL</h4>
-									<p class="col-12 col-md-6">info@webwow.nl</p>
+									<?php
+										$email = get_field('email');
+
+										if (!empty($email)) :
+									?>
+										<h4 class="col-12 col-md-6">EMAIL</h4>
+										<p class="col-12 col-md-6"><a href="mailto:<?php echo $email; ?>" target="_blank"><?php echo $email; ?></a></p>
+									<?php endif; ?>
 								</li>
 								<li>
-									<h4>WHATSAPP</h4>
-									<p class="col-12 col-md-6"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/whatsapp-color.svg" alt="Whatsapp Icon" width="37" height="37"></p>
+									<?php
+										$whatsapp = get_field('url_whatsapp');
+
+										if (!empty($whatsapp)) :
+									?>
+										<h4>WHATSAPP</h4>
+										<p class="col-12 col-md-6">
+											<a href="<?php echo $whatsapp; ?>" target="_blank">
+												<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/whatsapp-color.svg" alt="Whatsapp Icon" width="37" height="37">
+											</a>
+										</p>
+									<?php endif; ?>
 								</li>
 								<li>
-									<h4 class="col-12 col-md-6">SOCIAL</h4>
-									
-									<div class="col-12 col-md-6">
-										<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/facebook.svg" alt="Facebook Icon" width="37" height="37"></a>
-										<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/instagram.svg" alt="Instagram Icon" width="37" height="37"></a>
-									</div>
+									<?php
+										$facebook = get_field('url_facebook');
+										$instagram = get_field('url_instagram');
+
+										if (!empty($facebook) || !empty($instagram)) :
+									?>
+										<h4 class="col-12 col-md-6">SOCIAL</h4>
+										
+										<div class="col-12 col-md-6">
+											<?php
+												if (!empty($facebook)) :
+											?>
+												<a href="<?php echo $facebook; ?>" target="_blank">
+													<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/facebook.svg" alt="Facebook Icon" width="37" height="37">
+												</a>
+											<?php endif; ?>
+											<?php
+												if (!empty($instagram)) :
+											?>
+												<a href="<?php echo $instagram; ?>" target="_blank">
+													<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/instagram.svg" alt="Instagram Icon" width="37" height="37">
+												</a>
+											<?php endif; ?>
+										</div>
+										<?php endif; ?>
 								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-12 col-md-6">
-						<div class="contact-logo">
-							<ul>
-								<li>
-									<a href="index.html"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-webwow.png" alt="Logo"></a>
-								</li>
-							</ul>
+						<div class="contact-form">
+							<?php echo do_shortcode('[contact-form-7 id="16f3daf" title="Contact form"]') ?>
 						</div>
 					</div>
 				</div>

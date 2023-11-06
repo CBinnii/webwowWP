@@ -15,7 +15,7 @@
                     $color = get_sub_field('color');
                 ?>
                     <div class="swiper-slide" style='background-image: url("<?php echo $image; ?>");'>
-                        <div>
+                        <div class="slide-content">
                             <h1 class="title <?php echo $color; ?>"><?php echo $title; ?></h1>
         
                             <div class="button">

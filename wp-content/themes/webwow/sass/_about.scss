@@ -9,10 +9,10 @@
     align-items: center;
     justify-content: center;
     
-    font-family: 'telegraf_regular', 'Lucida Sans', Verdana, sans-serif;
+    font-family: 'ogg_text_book', 'Lucida Sans', Verdana, sans-serif;
 
     strong {
-        font-family: 'telegraf_ultrabold', 'Lucida Sans', Verdana, sans-serif;
+        font-family: 'ogg_text_bold', 'Lucida Sans', Verdana, sans-serif;
     }
 
     .about-page-text {
@@ -26,7 +26,7 @@
         
         p {
             font-size: 18px;
-            text-transform: uppercase;
+            // text-transform: uppercase;
             color: $black;
             text-decoration: none;
             line-height: 1.5;
