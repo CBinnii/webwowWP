@@ -7,7 +7,7 @@
         <!-- Link Swiper's CSS -->
         <?php wp_head(); ?>
         <link rel="icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png">
-        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css" />
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css?v=1.0">
     </head>
 
     <body>

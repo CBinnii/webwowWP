@@ -20315,6 +20315,10 @@ input:active, input:focus, button:active, button:focus {
     margin: 0 auto; }
     .about-page .about-page-text .title {
       margin-bottom: 50px !important; }
+      @media screen and (max-width: 991px) {
+        .about-page .about-page-text .title {
+          font-size: 28px !important;
+          margin-bottom: 20px !important; } }
     .about-page .about-page-text p {
       font-size: 18px;
       color: #000000;
@@ -20340,7 +20344,8 @@ input:active, input:focus, button:active, button:focus {
       margin-bottom: 50px !important; }
       @media screen and (max-width: 991px) {
         .internal-page .internal-page-text .title {
-          font-size: 28px !important; } }
+          font-size: 28px !important;
+          margin-bottom: 20px !important; } }
     .internal-page .internal-page-text p {
       font-family: 'ogg_text_book', 'Lucida Sans', Verdana, sans-serif;
       font-size: 16px;
