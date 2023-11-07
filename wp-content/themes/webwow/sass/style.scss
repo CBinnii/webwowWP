@@ -40,13 +40,74 @@ body {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0em;
-	font-size: 72px;
+	font-size: 70px;
 	margin-bottom: 80px;
 	line-height: 1.2;
 
 	@media screen and (max-width: 767px){
 		font-size: 32px;
 		margin-bottom: 48px;
+	}
+
+	&.primary {
+		text-shadow: 0.02605448em -0.02429619em 0em rgba(0, 255, 255, 1.000000), -0.02605448em 0.02429619em 0em rgba(255, 0, 0, 1.000000);
+	}
+
+	&.white {
+		color: $white;
+		text-shadow: 0.02605448em -0.02429619em 0em rgba(0, 255, 255, 1.000000), -0.02605448em 0.02429619em 0em rgba(255, 0, 0, 1.000000);
+	}
+
+	&.black {
+		color: $black;
+		text-shadow: 0.02605448em -0.02429619em 0em rgba(0, 255, 255, 1.000000), -0.02605448em 0.02429619em 0em rgba(255, 0, 255, 1.000000);
+	}
+
+	&.purple {
+		color: $purple;
+		text-shadow: 0.02605448em -0.02429619em 0em rgba(0, 255, 255, 1.000000), -0.02605448em 0.02429619em 0em rgba(255, 0, 255, 1.000000);
+	}
+
+	&.orange {
+		color: $orange;
+		text-shadow: 0.02605448em -0.02429619em 0em rgba(0, 255, 255, 1.000000), -0.02605448em 0.02429619em 0em rgba(255, 0, 255, 1.000000);
+	}
+
+	&.blue {
+		color: $blue;
+		text-shadow: 0.02605448em -0.02429619em 0em rgba(0, 255, 255, 1.000000), -0.02605448em 0.02429619em 0em rgba(255, 0, 255, 1.000000);
+	}
+
+	&.pink {
+		color: $pink;
+		text-shadow: 0.02605448em -0.02429619em 0em rgba(0, 255, 255, 1.000000), -0.02605448em 0.02429619em 0em rgba(255, 0, 255, 1.000000);
+	}
+
+	&.text-left {
+		text-align: left;
+	}
+
+	&.text-right {
+		text-align: right;
+	}
+
+	&.text-center {
+		text-align: center;
+	}
+}
+
+.subtitle {
+	font-family: 'bungee', 'Lucida Sans', Geneva, Verdana, sans-serif;
+	line-height: 0.73788139em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0em;
+	font-size: 32px;
+	margin-bottom: 70px;
+	line-height: 1.2;
+
+	@media screen and (max-width: 767px){
+		font-size: 24px;
 	}
 
 	&.primary {

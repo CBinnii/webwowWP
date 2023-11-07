@@ -20,6 +20,14 @@
 					
 					<?php if( have_rows('works') ): ?>
 						<div class="row works">
+							<?php 
+								$title = get_field('title_service');
+
+								if (!empty($title)) :
+							?>
+								<h3 class="subtitle black text-center"><?php echo get_field('title_service') ?></h3>
+							<?php endif; ?>
+
 							<?php
 								while( have_rows('works') ) : the_row();
 
