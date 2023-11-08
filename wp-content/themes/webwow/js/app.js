@@ -42,11 +42,19 @@ var el2 = document.getElementById('swiper-ie'); if (window.isIE) {
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
-            // renderBullet: (index, className) => {
-            //     const value = 'text' || '';
-            //     return '<span class=' + className + '>' + '<span class="s-label">' + value + '</span></span>';
-            // }
         },
+
+        // breakpoints: {
+        //     768: {
+        //         loop: true,
+        //         speed: 300,
+        //         autoplay: {
+        //             delay: 100,
+        //             disableOnInteraction: false,
+        //         },
+        //     },
+        // },
+        
         on: {
             slideChange: (swiper) => {
                 const { offsetTop } = swiper.el;
@@ -59,6 +67,6 @@ var el2 = document.getElementById('swiper-ie'); if (window.isIE) {
                 const activeIndex = swiper.activeIndex;
                 swiper.params.mousewheel.releaseOnEdges = activeIndex === 0 || (activeIndex === slidesLength - 1);
             }
-        }
+        },
     });
 }
